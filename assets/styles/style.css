@@ -33,7 +33,9 @@ body {
 
 .Currency {
   grid-area: Currency;
-  background-color: blue;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .Notice {
