@@ -8,16 +8,17 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr 1.8fr 1fr;
-  gap: 0px 0px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: row;
   grid-template-areas:
-    "logo logo notice-button"
+    "logo notice-button notice-button"
+    "slider slider slider"
     "slider slider slider"
     "slider slider slider"
     "currency oil-prices weather-forecast"
+    "currency oil-prices weather-forecast"
     "currency oil-prices weather-forecast";
-    gap: 2% 1%;
+  gap: 1%;
 }
 
 .logo {
@@ -28,22 +29,32 @@ body {
   grid-area: notice-button;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  font-size: 1.5em;
+  gap: 100px;
 }
 
 .notice-button__btn {
-  height: 7vh;
-  width: 10vw;
+  padding: 30px;
   background-color: rgb(255, 98, 0);
   border: none;
   color: white;
-  font-size: 2.5em;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.social-media {
+  display: flex;
+  gap: 30px;
+}
+
+.social-media img {
+  height: 60px;
 }
 
 .slider {
   grid-area: slider;
-  /* display: flex;
-  justify-content: center; */
+  background-color: grey;
 }
 
 .slider__video {
@@ -52,13 +63,29 @@ body {
 }
 
 .video-container {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(51, 51, 51);
+  display: flex;
+  justify-content: center;
+  background-image: url(../media/video-bg.jpg);
+  /* background-color: rgb(238, 238, 238); */
 }
 
 .currency {
   grid-area: currency;
+  background-color: rgb(214, 231, 255);
+  padding: 3.5vh 2.8vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: rgb(202, 71, 0);
+}
+
+#currency-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .oil-prices {
@@ -68,8 +95,15 @@ body {
 .weather-forecast {
   grid-area: weather-forecast;
   display: flex;
-  flex-direction: column;
-  gap: 22px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-unit {
+  width: 33%;
+  height: fit-content;
 }
 
 /* SLIDER */
@@ -79,6 +113,7 @@ body {
   /* max-width: 100vw; */
   position: relative;
   margin: auto;
+  height: 100%;
 }
 
 /* Hide the images by default */
@@ -141,9 +176,9 @@ body {
 /* The dots/bullets/indicators */
 
 .dots {
-    position: absolute;
-    top: 1250px;
-    left: 1900px;
+  position: absolute;
+  top: 1230px;
+  left: 50%;
 }
 
 .dot {
@@ -164,7 +199,7 @@ body {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
 }
 
 @keyframes fade {
@@ -177,17 +212,71 @@ body {
 }
 
 .slider__img {
-    height: 900px;
-    width: 100%;
-    background-size: cover;
+  height: 900px;
+  width: 100%;
+  background-size: cover;
 }
 
 #photo-1 {
-    background-image: url(../media/photo1.jpg);
-    background-position: 50% 65%;
+  background-image: url(../media/photo1.jpg);
+  background-position: 50% 65%;
 }
 
 #photo-2 {
-    background-image: url(../media/photo-2.jpg);
+  background-image: url(../media/photo-2.jpg);
 }
 /* SLIDER */
+
+/* CURRENCY */
+.currency-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 2em;
+  background-color: rgb(236, 246, 255);
+  border-radius: 10px;
+  width: 13vw;
+  padding: 20px;
+  font-weight: 500;
+  color: rgb(0, 3, 68);
+}
+
+.curr-val-img {
+  display: inherit;
+  gap: 10px;
+}
+
+.curr-val-img img {
+  height: 2vh;
+}
+
+.curr-logo {
+  display: inherit;
+  gap: 15px;
+  align-self: right;
+}
+
+.curr-logo img {
+  height: 1.2vh;
+}
+
+.currency-item img {
+  align-self: center;
+}
+
+.currency-change {
+  color: rgb(207, 91, 3);
+}
+/* CURRENCY */
+
+/* LOCAL TIME */
+.times {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.time {
+  border: 3px solid orangered;
+}
+/* LOCAL TIME */

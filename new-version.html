@@ -17,7 +17,28 @@
         />
       </div>
       <div class="notice-button">
+        <div class="times">
+          <div class="time">
+            <div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24" id="tz24-1665634174-c133-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjM0NzhmN2VhYjkwZSIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="clock Beijing" target="_blank" rel="nofollow">Current time in Beijing</a></p><div id="clock_block_cb63478f7eab90e"></div></div>
+            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+          </div>
+          <div class="time" id="almatyTime">
+            <div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Almaty/time" class="clock24" id="tz24-1665631015-c1382-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjM0NzgzMjc1MTljNCIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="actual time Almaty" target="_blank" rel="nofollow">Current time in Almaty</a></p><div id="clock_block_cb63478327519c4"></div></div>
+            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            <!-- <p>Current time in Almaty</p> -->
+          </div>
+          <div class="time">
+            <div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Moscow/time" style="text-decoration: none" class="clock24" id="tz24-1665634368-c1166-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjM0NzkwNDBkNzBlOCIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="Moscow current time" target="_blank" rel="nofollow">Current time in Moscow</a></p><div id="clock_block_cb63479040d70e8"></div></div>
+            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+          </div>
+        </div>
         <a href="./assets/media/索引－9780128014998 Handbook of Natural Gas Transmissio.pdf" target="_blank"><button class="notice-button__btn">OPEN NOTICE</button></a>
+        <div class="social-media">
+          <a href="#"><img src="./assets/media/facebook.png" alt=""></a>
+          <a href="#"><img src="./assets/media/twitter.png" alt=""></a>
+          <a href="#"><img src="./assets/media/instagram.png" alt=""></a>
+          <a href="#"><img src="./assets/media/youtube.png" alt=""></a>
+        </div>
       </div>
       <div class="slider">
         <!-- Slideshow container -->
@@ -25,7 +46,7 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <div class="video-container">
+            <div class="video-container" id="video">
               <video
                 src="./assets/media/maxhub-panel.mp4"
                 class="slider__video"
@@ -60,14 +81,16 @@
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </div>
-      <div class="currency" id="currency-container">
-        <iframe src="https://fxpricing.com/fx-widget/market-currency-rates-widget.php?id=1840,675,1440,1806,640,1424&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=EF7C00&by-cr=28A745&sl-cr=DC3545&flags=circle&value_alignment=center&column=price,chg_per,time&lang=en&font=Arial, sans-serif" width="100%" height="290" style="border: 1px solid #eee;"></iframe><div id="fx-pricing-widget-copyright"><span>Powered by </span><a href="https://fxpricing.com/" target="_blank">FX Pricing</a></div><style type="text/css">#fx-pricing-widget-copyright{text-align: center; font-size: 13px; font-family: sans-serif; margin-top: 10px; margin-bottom: 10px; color: #9db2bd;} #fx-pricing-widget-copyright a{text-decoration: unset; color: #bb3534; font-weight: 600;}</style>
+      <div class="currency">
+        <h1>Curency rates</h1>
+        <div id="currency-container">
+
+        </div>
+        <!-- <iframe src="https://fxpricing.com/fx-widget/market-currency-rates-widget.php?id=1840,675,1440,1806,640,1424&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=EF7C00&by-cr=28A745&sl-cr=DC3545&flags=circle&value_alignment=center&column=price,chg_per,time&lang=en&font=Arial, sans-serif" width="100%" height="290" style="border: 1px solid #eee;"></iframe><div id="fx-pricing-widget-copyright"><span>Powered by </span><a href="https://fxpricing.com/" target="_blank">FX Pricing</a></div><style type="text/css">#fx-pricing-widget-copyright{text-align: center; font-size: 13px; font-family: sans-serif; margin-top: 10px; margin-bottom: 10px; color: #9db2bd;} #fx-pricing-widget-copyright a{text-decoration: unset; color: #bb3534; font-weight: 600;}</style> -->
       </div>
       <div class="oil-prices">
         <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
-    <!-- <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/markets/futures/" rel="noopener" target="_blank"><span class="blue-text">Futures</span></a> by TradingView</div> -->
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
     {
     "colorTheme": "light",
@@ -115,7 +138,7 @@
     ]
   }
     </script>
-  </div>
+</div>
   <!-- TradingView Widget END -->
       </div>
       <div class="weather-forecast">
@@ -193,6 +216,50 @@
             data-days="5"
             data-theme="weather_one"
             >ASHGABAT</a
+          >
+          <script>
+            !(function (d, s, id) {
+              var js,
+                fjs = d.getElementsByTagName(s)[0];
+              if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://weatherwidget.io/js/widget.min.js";
+                fjs.parentNode.insertBefore(js, fjs);
+              }
+            })(document, "script", "weatherwidget-io-js");
+          </script>
+        </div>
+        <div class="weather-unit">
+          <a
+            class="weatherwidget-io"
+            href="https://forecast7.com/en/51d51n0d13/london/"
+            data-label_1="LONDON"
+            data-days="5"
+            data-theme="weather_one"
+            >KABUL</a
+          >
+          <script>
+            !(function (d, s, id) {
+              var js,
+                fjs = d.getElementsByTagName(s)[0];
+              if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://weatherwidget.io/js/widget.min.js";
+                fjs.parentNode.insertBefore(js, fjs);
+              }
+            })(document, "script", "weatherwidget-io-js");
+          </script>
+        </div>
+        <div class="weather-unit">
+          <a
+            class="weatherwidget-io"
+            href="https://forecast7.com/en/35d71139d73/tokyo/"
+            data-label_1="TOKYO"
+            data-days="5"
+            data-theme="weather_one"
+            >KABUL</a
           >
           <script>
             !(function (d, s, id) {
