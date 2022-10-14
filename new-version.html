@@ -8,10 +8,20 @@
     <title>CIK - MAXHUB</title>
   </head>
   <body>
+    <div class="modal-container" id="modalContainer">
+      <div class="modal" id="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <object>
+          <embed
+            src="./assets/media/索引－9780128014998 Handbook of Natural Gas Transmissio.pdf" height="100%" width="100%" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"
+          />
+        </object>
+      </div>
+    </div>
     <div class="container">
       <div class="logo">
         <img
-          src="./assets/media/China_National_Petroleum_Corporation-Logo 1.svg"
+          src="./assets/media/cnpc-logo.svg"
           alt="cnpc-logo"
           class="logo__cnpc"
         />
@@ -22,17 +32,17 @@
             <div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24" id="tz24-1665634174-c133-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjM0NzhmN2VhYjkwZSIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="clock Beijing" target="_blank" rel="nofollow">Current time in Beijing</a></p><div id="clock_block_cb63478f7eab90e"></div></div>
             <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
           </div>
-          <div class="time" id="almatyTime">
+          <div class="time">
             <div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Almaty/time" class="clock24" id="tz24-1665631015-c1382-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjM0NzgzMjc1MTljNCIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="actual time Almaty" target="_blank" rel="nofollow">Current time in Almaty</a></p><div id="clock_block_cb63478327519c4"></div></div>
             <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-            <!-- <p>Current time in Almaty</p> -->
           </div>
           <div class="time">
             <div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Moscow/time" style="text-decoration: none" class="clock24" id="tz24-1665634368-c1166-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNjM0NzkwNDBkNzBlOCIsInR5cGUiOiJkYiIsImxhbmciOiJlbiJ9" title="Moscow current time" target="_blank" rel="nofollow">Current time in Moscow</a></p><div id="clock_block_cb63479040d70e8"></div></div>
             <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
           </div>
         </div>
-        <a href="./assets/media/索引－9780128014998 Handbook of Natural Gas Transmissio.pdf" target="_blank"><button class="notice-button__btn">OPEN NOTICE</button></a>
+        <!-- Open notice button -->
+        <button class="notice-button__btn" id="openModal">OPEN NOTICE</button>
         <div class="social-media">
           <a href="#"><img src="./assets/media/facebook.png" alt=""></a>
           <a href="#"><img src="./assets/media/twitter.png" alt=""></a>
@@ -82,11 +92,10 @@
         </div>
       </div>
       <div class="currency">
-        <h1>Curency rates</h1>
+        <p>Curency rates</p>
         <div id="currency-container">
 
         </div>
-        <!-- <iframe src="https://fxpricing.com/fx-widget/market-currency-rates-widget.php?id=1840,675,1440,1806,640,1424&click_target=blank&theme=light&tm-cr=FFFFFF&hr-cr=EF7C00&by-cr=28A745&sl-cr=DC3545&flags=circle&value_alignment=center&column=price,chg_per,time&lang=en&font=Arial, sans-serif" width="100%" height="290" style="border: 1px solid #eee;"></iframe><div id="fx-pricing-widget-copyright"><span>Powered by </span><a href="https://fxpricing.com/" target="_blank">FX Pricing</a></div><style type="text/css">#fx-pricing-widget-copyright{text-align: center; font-size: 13px; font-family: sans-serif; margin-top: 10px; margin-bottom: 10px; color: #9db2bd;} #fx-pricing-widget-copyright a{text-decoration: unset; color: #bb3534; font-weight: 600;}</style> -->
       </div>
       <div class="oil-prices">
         <!-- TradingView Widget BEGIN -->

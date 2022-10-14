@@ -5,6 +5,7 @@ body {
   line-height: 0;
 }
 
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -21,8 +22,29 @@ body {
   gap: 1%;
 }
 
+.modal-container {
+  position: fixed;
+  display: none;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal {
+  margin: 5% auto;
+  width: 60%;
+  height: 80%;
+}
+
 .logo {
   grid-area: logo;
+}
+
+.logo__cnpc {
+  height: 10vh;
 }
 
 .notice-button {
@@ -30,8 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 1.5em;
-  gap: 100px;
+  gap: 2vw;
 }
 
 .notice-button__btn {
@@ -39,7 +60,7 @@ body {
   background-color: rgb(255, 98, 0);
   border: none;
   color: white;
-  font-size: 2em;
+  font-size: 1.3vw;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -58,7 +79,7 @@ body {
 }
 
 .slider__video {
-  height: 900px;
+  height: 40vh;
   align-self: center;
 }
 
@@ -77,6 +98,8 @@ body {
   flex-direction: column;
   gap: 50px;
   color: rgb(202, 71, 0);
+  font-size: 1vw;
+  font-weight: bold;
 }
 
 #currency-container {
@@ -153,17 +176,6 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -177,7 +189,7 @@ body {
 
 .dots {
   position: absolute;
-  top: 1230px;
+  top: 53vh;
   left: 50%;
 }
 
@@ -212,7 +224,7 @@ body {
 }
 
 .slider__img {
-  height: 900px;
+  height: 40vh;
   width: 100%;
   background-size: cover;
 }
@@ -232,7 +244,7 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  font-size: 2em;
+  font-size: 0.8vw;
   background-color: rgb(236, 246, 255);
   border-radius: 10px;
   width: 13vw;

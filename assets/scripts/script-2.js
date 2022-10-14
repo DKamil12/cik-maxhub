@@ -44,7 +44,7 @@ function showSlidesAut() {
   }
   slides[slideIndex1-1].style.display = "block";  
   dots[slideIndex1-1].className += " active";
-  setTimeout(showSlidesAut, 7000); // Change image every 2 seconds
+  setTimeout(showSlidesAut, 196200); // Change image every 2 seconds
 }
 
 
@@ -132,31 +132,23 @@ for (let i = 0; i < currCode.length; i++) {
   currencyRequest.send();
 }
 
-// LOCAL TIME AND DATE 
-// const time = new Date();
-// console.log(time);
+// MODAL WINDOW NOTICE 
+const openModal = document.getElementById("openModal");
 
-// const localTime = document.createElement('p');
-// localTime.setAttribute('class', 'local-time');
+const modalContainer = document.getElementById("modalContainer");
 
-// const getTime = new Date();
+const closeModal = document.getElementById("closeModal");
 
-// localTime.textContent = `${getTime.getHours()}:${getTime.getMinutes()}, Almaty`;
-// console.log(localTime.textContent);
+openModal.onclick = () => {
+  modalContainer.style.display = "block";
+}
 
-// const weekDay = ['Monday', "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+closeModal.onclick = () => {
+  modalContainer.style.display = "none";
+}
 
-// const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-// const localDate = document.createElement('p');
-// localDate.setAttribute('class', 'local-date');
-// localDate.textContent = `${weekDay[getTime.getDay() - 1]}, ${months[getTime.getMonth()]} ${getTime.getDate()}, ${getTime.getFullYear()}`;
-// console.log(localDate.textContent);
-
-// const almatyDate = document.getElementById('almatyTime');
-
-// almatyDate.appendChild(localTime);
-// almatyDate.appendChild(localDate);
-
-
-
+window.onclick = (event) => {
+  if (event.target == modalContainer) {
+    modalContainer.style.display = "none";
+  }
+}
