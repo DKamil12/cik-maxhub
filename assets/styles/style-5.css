@@ -1,0 +1,207 @@
+.wrapper {
+    height: 100vh;
+    width: 70vw;
+    /* overflow-y: hidden; */
+    margin: auto;
+    /* background-color: olive; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2vh;
+  }
+
+  .logo-cnpc {
+    width: 25vw;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .city-times {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+  }
+
+  .city-time {
+    border: 3px solid orangered;
+    background-color: #f3f3f3;
+  }
+
+  .slider {
+    height: 43.5vh;
+  }
+
+  /* SLIDER */
+  .slideshow-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  
+  .dots {
+    position: absolute;
+    top: 56vh;
+    left: 47.3vw;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .slider__img {
+    height: 100%;
+  }
+
+  .photo-1 {
+    background-image: url(../media/banner1.jpg);
+    height: 100%;
+    width: 70vw;
+    background-color: olive;
+    background-size: co;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+  }
+
+  .slider__video {
+    height: 43.5vh;
+  }
+  /* SLIDER */
+
+  /* CURRENCY */
+.currency {
+    background-color: rgb(214, 231, 255);
+    padding: 0.5vh 2.8vh;
+    display: flex;
+    flex-direction: column;
+    color: rgb(202, 71, 0);
+    font-size: 1vw;
+    font-weight: bold;
+    width: 21vw;
+}
+
+.currency-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+    background-color: rgb(236, 246, 255);
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 500;
+    color: rgb(0, 3, 68);
+  }
+  
+  .curr-val-img {
+    display: inherit;
+    gap: 10px;
+  }
+  
+  .curr-val-img img {
+    height: 2vh;
+  }
+  
+  .curr-logo {
+    display: inherit;
+    gap: 5px;
+    align-self: right;
+  }
+  
+  .curr-logo img {
+    height: 1.2vh;
+  }
+  
+  .currency-item img {
+    align-self: center;
+  }
+  
+  .currency-change {
+    color: rgb(207, 91, 3);
+  }
+  /* CURRENCY */
+
+  .statistics {
+    height: 30vh;
+    display: flex;
+  }
+
+  .oil-prices {
+    width: 21vw;
+  }
