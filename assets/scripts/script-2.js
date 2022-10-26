@@ -44,8 +44,25 @@ function showSlidesAut() {
   }
   slides[slideIndex1-1].style.display = "block";  
   dots[slideIndex1-1].className += " active";
-  setTimeout(showSlidesAut, 196200); // Change image every 2 seconds
+  setTimeout(showSlidesAut, 15000); // Change image every 2 seconds
 }
+
+// WEATHER SLIDER 
+let weatherIndex = 0;
+showWeatherSlides();
+
+function showWeatherSlides() {
+  let i;
+  let wSlides = document.getElementsByClassName("weatherSlide");
+  for (i = 0; i < wSlides.length; i++) {
+    wSlides[i].style.display = "none";
+  }
+  weatherIndex++;
+  if (weatherIndex > wSlides.length) {weatherIndex = 1};
+  wSlides[weatherIndex-1].style.display = "block";  
+  setTimeout(showWeatherSlides, 5000); // Change image every 2 seconds
+}
+
 
 
 // CURRENCY RATE
@@ -225,4 +242,12 @@ window.onclick = (event) => {
   if (event.target == modalContainer) {
     modalContainer.style.display = "none";
   }
+}
+
+const videoBtn = document.getElementById("videoBtn");
+
+videoBtn.onclick = () => {
+  const video = document.getElementById("video");
+  video.style.display = "block";
+  videoBtn.style.display = "none";
 }
