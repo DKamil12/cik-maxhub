@@ -51,10 +51,17 @@ function showSlidesAut() {
 // CURRENCY RATE
 
 // MAKE CURENCY ARRAY
-const currCode = ["USD", "CNY", "EUR", "RUB", "UZS", "AFN", "JPY", "BGN"];
+const currCode = ["USD", "CNY", "EUR", "RUB"];
+const currCode2 = ["USD", "EUR"];
 
-const currImg = ["united-states", "china", "european-union", "russia", "uzbekistan", "afghanistan", "japan", "united-kingdom"];
+const currImg = ["united-states", "china", "european-union", "russia"];
+const currImg2 = ["united-states", "european-union"];
 
+const toKzt = document.createElement("div");
+toKzt.setAttribute("class", "to-kzt");
+
+const toCny = document.createElement("div");
+toCny.setAttribute("class", "to-cny");
 
 // GET CURRENT DATE
 const currentDate = new Date();
@@ -76,6 +83,14 @@ const previousMonth = (previousDate.getMonth() + 1) < 10 ? `0${previousDate.getM
 const previousDay = (previousDate.getDate()) < 10 ? `0${previousDate.getDate()}` : previousDate.getDate();
 
 const startDate = `${previousDate.getFullYear()}-${previousMonth}-${previousDay}`;
+
+const baseKzt = document.createElement("p");
+baseKzt.setAttribute("class", "base");
+baseKzt.textContent = "KZT as a base";
+
+const baseCny = document.createElement("p");
+baseCny.setAttribute("class", "base");
+baseCny.textContent = "CNY as a base";
 
 
 for (let i = 0; i < currCode.length; i++) {
@@ -126,7 +141,66 @@ for (let i = 0; i < currCode.length; i++) {
 
     currencyItem.appendChild(currValImg);
     currencyItem.appendChild(currAndLogo);
-    currencyContainer.appendChild(currencyItem);
+
+    toKzt.appendChild(currencyItem);
+    currencyContainer.appendChild(baseKzt);
+    currencyContainer.appendChild(toKzt);
+  };
+
+  currencyRequest.send();
+}
+for (let i = 0; i < currCode2.length; i++) {
+  const currencyRequest = new XMLHttpRequest();
+  const curr = currCode2[i];
+
+  const currencyURL = `https://api.exchangerate.host/fluctuation?start_date=${startDate}&end_date=${endDate}&symbols=USD,CNY,EUR&base=${curr}`;
+
+  currencyRequest.open("GET", currencyURL, true);
+
+  const currencyContainer = document.getElementById("currency-container");
+  const currencyItem = document.createElement('div');
+  currencyItem.setAttribute('class', 'currency-item');
+
+  currencyRequest.onload = function () {
+    const currency = JSON.parse(this.response);
+
+    const currencyValue = document.createElement("p");
+    currencyValue.textContent = `${curr} : ${
+      Math.round(currency.rates.CNY.end_rate * 100) / 100
+    }`;
+
+    const currValImg = document.createElement('div');
+    const currImage = document.createElement('img');
+    currImage.src = `./assets/media/${currImg2[i]}.png`;
+    
+    currValImg.appendChild(currImage);
+    currValImg.setAttribute('class', 'curr-val-img');
+
+    currValImg.appendChild(currencyValue);
+
+    const currencyChangeImg = document.createElement("img");
+    const currencyChange = document.createElement('p');
+    currencyChange.setAttribute('class', 'currency-change');
+    currencyChange.textContent = - (Math.round(currency.rates.CNY.change * 100)) / 100;
+
+    if (currency.rates.CNY.change > 0) {
+      currencyChangeImg.src = './assets/media/down-arrow.png';
+    } else {
+      currencyChangeImg.src = './assets/media/up-arrow.png';
+    }
+
+    const currAndLogo = document.createElement('div');
+    currAndLogo.setAttribute('class', 'curr-logo');
+
+    currAndLogo.appendChild(currencyChangeImg)
+    currAndLogo.appendChild(currencyChange);
+
+    currencyItem.appendChild(currValImg);
+    currencyItem.appendChild(currAndLogo);
+
+    toCny.appendChild(currencyItem);
+    currencyContainer.appendChild(baseCny);
+    currencyContainer.appendChild(toCny);
   };
 
   currencyRequest.send();

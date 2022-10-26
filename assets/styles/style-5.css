@@ -10,25 +10,74 @@
     gap: 2vh;
   }
 
+  .modal-container {
+    position: fixed;
+    display: none;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal {
+    margin: 5% auto;
+    width: 60%;
+    height: 80%;
+  }
+
   .logo-cnpc {
     width: 25vw;
+    margin-right: 83px;
   }
 
   .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+  }
+
+  .btn-sm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .city-times {
     display: flex;
     flex-direction: row;
     gap: 0.5vw;
+    margin-right: 20px;
   }
 
   .city-time {
     border: 3px solid orangered;
-    background-color: #f3f3f3;
+    padding-right: 9px;
+    padding-bottom: 3px;
+  }
+
+  .city-time a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .notice-button__btn {
+    padding: 8px;
+    background-color: rgb(255, 98, 0);
+    border: none;
+    color: white;
+    font-size: 1.3vw;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social-media img {
+    height: 20px;
   }
 
   .slider {
@@ -89,14 +138,14 @@
   
   .dots {
     position: absolute;
-    top: 56vh;
-    left: 47.3vw;
+    top: 52vh;
+    left: 50vw;
   }
   
   .dot {
     cursor: pointer;
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -131,7 +180,7 @@
     background-image: url(../media/banner1.jpg);
     height: 100%;
     width: 70vw;
-    background-color: olive;
+    /* background-color: olive; */
     background-size: co;
   }
 
@@ -139,6 +188,7 @@
     display: flex;
     justify-content: center;
     width: 70vw;
+    background-image: url(../media/video.jpg);
   }
 
   .slider__video {
@@ -146,10 +196,14 @@
   }
   /* SLIDER */
 
+  .stat-item {
+    width: 350px;
+  }
+
   /* CURRENCY */
 .currency {
     background-color: rgb(214, 231, 255);
-    padding: 0.5vh 2.8vh;
+    padding: 0.5vh 1vw;
     display: flex;
     flex-direction: column;
     color: rgb(202, 71, 0);
@@ -158,13 +212,32 @@
     width: 21vw;
 }
 
+.base {
+  color: rgb(200, 0, 0);
+  text-align: center;
+}
+
+.to-kzt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.to-cny {
+  display: flex;
+  gap: 10px;
+}
+
 .currency-item {
     display: flex;
     justify-content: space-between;
-    font-size: 1vw;
+    font-size: 0.7vw;
     background-color: rgb(236, 246, 255);
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 5px 12px;
+    width: 120px;
     font-weight: 500;
     color: rgb(0, 3, 68);
   }
@@ -198,10 +271,15 @@
   /* CURRENCY */
 
   .statistics {
-    height: 30vh;
+    height: 41vh;
     display: flex;
+    gap: 10px;
   }
 
   .oil-prices {
     width: 21vw;
+  }
+
+  .weather-forecast {
+    overflow-y: auto;
   }
