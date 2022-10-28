@@ -9,6 +9,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    box-sizing: content-box;
   }
 
   .modal-container {
@@ -187,6 +188,7 @@ p {
   .slider__img {
     height: 100%;
     width: 75vw;
+    object-fit: cover;
   }
 
   .video-container {
@@ -222,13 +224,11 @@ p {
   /* CURRENCY */
 .currency {
     background-color: rgb(214, 231, 255);
-    padding: 1.2vw;
-    display: flex;
-    flex-direction: column;
     color: rgb(202, 71, 0);
     font-size: 1vw;
     font-weight: bold;
     line-height: 14px;
+    padding: 15px;
 }
 
 .base {
@@ -256,7 +256,7 @@ p {
     background-color: rgb(236, 246, 255);
     border-radius: 10px;
     padding: 5px 12px;
-    width: 118px;
+    width: 9.2vw;
     font-weight: 500;
     color: rgb(0, 3, 68);
   }
