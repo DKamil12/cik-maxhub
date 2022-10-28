@@ -17,6 +17,17 @@
     height: 100%;
     background-color: rgba(0,0,0,0.4);
   }
+
+  .add-notice {
+    
+  }
+
+  .add-notice-icon {
+    width: 40px;
+    position: absolute;
+    top: 12%;
+    left: 15%;
+  }
   
   .modal {
     margin: 5% auto;
@@ -60,11 +71,11 @@
   }
   
   .notice-button__btn {
-    padding: 8px;
+    padding: 8px 6.5px;
     background-color: rgb(255, 98, 0);
     border: none;
     color: white;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
   
@@ -139,7 +150,7 @@
   
   .dots {
     position: absolute;
-    top: 52vh;
+    top: 55vh;
     left: 50vw;
   }
   
@@ -238,7 +249,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .to-cny {
@@ -249,7 +260,7 @@
 .currency-item {
     display: flex;
     justify-content: space-between;
-    font-size: 0.7vw;
+    font-size: 0.73vw;
     background-color: rgb(236, 246, 255);
     border-radius: 10px;
     padding: 5px 12px;
