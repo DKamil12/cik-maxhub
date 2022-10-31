@@ -217,7 +217,7 @@ p {
   align-items: center;
   width: 75vw;
   height: 42vh;
-  background-image: url(../media/video.jpg);
+  background-image: url(../media/slider-images/video.jpg);
   background-size: cover;
 }
 
@@ -248,7 +248,8 @@ p {
 .currency {
   background-color: rgb(214, 231, 255);
   color: rgb(202, 71, 0);
-  font-size: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95vw;
   font-weight: bold;
   line-height: 14px;
   padding: 5px 15px;

@@ -163,9 +163,9 @@ for (let i = 0; i < currCode.length; i++) {
       -Math.round(currency.rates.KZT.change * 100) / 100;
 
     if (currency.rates.KZT.change > 0) {
-      currencyChangeImg.src = "./assets/media/down-arrow.png";
+      currencyChangeImg.src = "./assets/media/currency-icons/down-arrow.png";
     } else {
-      currencyChangeImg.src = "./assets/media/up-arrow.png";
+      currencyChangeImg.src = "./assets/media/currency-icons/up-arrow.png";
     }
 
     const currAndLogo = document.createElement("div");
@@ -220,9 +220,9 @@ for (let i = 0; i < currCode2.length; i++) {
       -Math.round(currency.rates.CNY.change * 100) / 100;
 
     if (currency.rates.CNY.change > 0) {
-      currencyChangeImg.src = "./assets/media/down-arrow.png";
+      currencyChangeImg.src = "./assets/media/currency-icons/down-arrow.png";
     } else {
-      currencyChangeImg.src = "./assets/media/up-arrow.png";
+      currencyChangeImg.src = "./assets/media/currency-icons/up-arrow.png";
     }
 
     const currAndLogo = document.createElement("div");
