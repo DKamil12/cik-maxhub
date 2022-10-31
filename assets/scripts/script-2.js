@@ -119,13 +119,13 @@ const previousDay =
 
 const startDate = `${previousDate.getFullYear()}-${previousMonth}-${previousDay}`;
 
-const baseKzt = document.createElement("p");
+const baseKzt = document.createElement("img");
 baseKzt.setAttribute("class", "base");
-baseKzt.textContent = "KZT as a base";
+baseKzt.src = './assets/media/currency-icons/kazakhstan.png';
 
-const baseCny = document.createElement("p");
+const baseCny = document.createElement("img");
 baseCny.setAttribute("class", "base");
-baseCny.textContent = "CNY as a base";
+baseCny.src = './assets/media/currency-icons/china.png';
 
 for (let i = 0; i < currCode.length; i++) {
   const currencyRequest = new XMLHttpRequest();
@@ -149,7 +149,7 @@ for (let i = 0; i < currCode.length; i++) {
 
     const currValImg = document.createElement("div");
     const currImage = document.createElement("img");
-    currImage.src = `./assets/media/${currImg[i]}.png`;
+    currImage.src = `./assets/media/currency-icons/${currImg[i]}.png`;
 
     currValImg.appendChild(currImage);
     currValImg.setAttribute("class", "curr-val-img");
@@ -206,7 +206,7 @@ for (let i = 0; i < currCode2.length; i++) {
 
     const currValImg = document.createElement("div");
     const currImage = document.createElement("img");
-    currImage.src = `./assets/media/${currImg2[i]}.png`;
+    currImage.src = `./assets/media/currency-icons/${currImg2[i]}.png`;
 
     currValImg.appendChild(currImage);
     currValImg.setAttribute("class", "curr-val-img");
@@ -263,14 +263,26 @@ window.onclick = (event) => {
   }
 };
 
-const videoBtn = document.getElementById("videoBtn");
+const video = document.querySelector(".slider__video");
+const overlay = document.querySelector(".overlay");
+const playVideo = document.querySelector("#videoBtn");
 
-videoBtn.onclick = () => {
-  const video = document.getElementById("video");
-  video.style.display = "block";
-  videoBtn.style.display = "none";
-};
 
+const openVideo = function () {
+  video.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}
+
+const closeVideo = function() {
+  video.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
+playVideo.addEventListener('click', openVideo);
+overlay.addEventListener('click', closeVideo);
+
+
+// ADDING NEW NOTICE
 const pdf = document.querySelector("#pdf");
 
 const addNotice = document.querySelector("#addNotice");
